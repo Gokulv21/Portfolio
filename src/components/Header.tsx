@@ -47,8 +47,12 @@ const Header = () => {
       <nav className="container-custom px-4 py-2 flex items-center justify-between">
         {/* Logo */}
         <div className="flex items-center space-x-2">
-          <div className="w-10 h-10 bg-gradient-to-r from-amber-500 to-orange-600 rounded-lg flex items-center justify-center">
-            <span className="text-white font-bold text-xl">G</span>
+          <div className="w-10 h-10 rounded-lg overflow-hidden border-2 border-amber-500/30">
+            <img 
+              src="/gokul-photo.jpeg" 
+              alt="Gokul" 
+              className="w-full h-full object-cover"
+            />
           </div>
           <span className="text-xl font-bold text-gradient">Gokul</span>
         </div>

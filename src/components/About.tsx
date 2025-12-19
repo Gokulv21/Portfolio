@@ -42,14 +42,12 @@ Currently seeking opportunities to apply my skills in challenging projects and c
             {/* Professional Image Placeholder */}
             <div className="relative group">
               <div className="glass rounded-2xl p-1">
-                <div className="aspect-square bg-gradient-to-br from-amber-500/20 to-orange-600/20 rounded-2xl flex items-center justify-center">
-                  <div className="text-center">
-                    <div className="w-32 h-32 mx-auto mb-4 bg-gradient-to-r from-amber-500 to-orange-600 rounded-full flex items-center justify-center">
-                      <User className="w-16 h-16 text-white" />
-                    </div>
-                    <h3 className="text-2xl font-bold text-white mb-2">Gokul</h3>
-                    <p className="text-gray-300">Full-Stack Developer</p>
-                  </div>
+                <div className="aspect-square bg-gradient-to-br from-amber-500/20 to-orange-600/20 rounded-2xl flex items-center justify-center overflow-hidden">
+                  <img 
+                    src="/gokul-photo.jpeg" 
+                    alt="Gokul" 
+                    className="w-full h-full object-cover rounded-2xl transition-transform duration-300 group-hover:scale-105"
+                  />
                 </div>
               </div>
               {/* Floating elements */}
