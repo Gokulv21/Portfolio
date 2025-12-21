@@ -36,112 +36,82 @@ Currently seeking opportunities to apply my skills in challenging projects and c
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-12 items-start">
-          {/* Left Column - Personal Info & Image */}
-          <div className="space-y-8">
-            {/* Professional Image Placeholder */}
-            <div className="relative group">
-              <div className="glass rounded-2xl p-1">
-                <div className="aspect-square bg-gradient-to-br from-amber-500/20 to-orange-600/20 rounded-2xl flex items-center justify-center overflow-hidden">
-                  <img 
-                    src="/gokul-photo.jpeg" 
-                    alt="Gokul" 
-                    className="w-full h-full object-cover rounded-2xl transition-transform duration-300 group-hover:scale-105"
-                  />
+        <div className="max-w-4xl mx-auto">
+          {/* Bio Card */}
+          <div className="glass rounded-2xl p-8 mb-12">
+            <div className="mb-6">
+              <h3 className="text-2xl font-bold text-white mb-2">
+                {bio.subtitle}
+              </h3>
+              <div className="w-20 h-1 bg-gradient-to-r from-amber-500 to-orange-600 rounded-full"></div>
+            </div>
+
+            <div className="prose prose-invert max-w-none">
+              {bio.description.split('\n\n').map((paragraph, index) => (
+                <p key={index} className="text-gray-300 leading-relaxed mb-4">
+                  {paragraph}
+                </p>
+              ))}
+            </div>
+
+            {/* Key Highlights */}
+            <div className="mt-8 pt-6 border-t border-white/10">
+              <h4 className="text-lg font-semibold text-white mb-4">Key Highlights</h4>
+              <div className="grid grid-cols-2 gap-4">
+                <div className="flex items-center space-x-2">
+                  <div className="w-2 h-2 bg-amber-400 rounded-full"></div>
+                  <span className="text-gray-300 text-sm">B.Tech CSBS (2024)</span>
                 </div>
-              </div>
-              {/* Floating elements */}
-              <div className="absolute -top-4 -right-4 glass p-3 rounded-xl card-hover">
-                <Code className="w-6 h-6 text-amber-400" />
-              </div>
-              <div className="absolute -bottom-4 -left-4 glass p-3 rounded-xl card-hover">
-                <Briefcase className="w-6 h-6 text-amber-400" />
+                <div className="flex items-center space-x-2">
+                  <div className="w-2 h-2 bg-amber-400 rounded-full"></div>
+                  <span className="text-gray-300 text-sm">Full-Stack Development</span>
+                </div>
+                <div className="flex items-center space-x-2">
+                  <div className="w-2 h-2 bg-amber-400 rounded-full"></div>
+                  <span className="text-gray-300 text-sm">Java & Spring Boot</span>
+                </div>
+                <div className="flex items-center space-x-2">
+                  <div className="w-2 h-2 bg-amber-400 rounded-full"></div>
+                  <span className="text-gray-300 text-sm">React.js & Modern Web</span>
+                </div>
               </div>
             </div>
 
-            {/* Personal Information Cards */}
-            <div className="grid sm:grid-cols-2 gap-4">
-              {personalInfo.map((info, index) => (
-                <div
-                  key={index}
-                  className="glass rounded-xl p-4 card-hover group"
-                >
-                  <div className="flex items-start space-x-3">
-                    <div className="p-2 bg-amber-500/10 rounded-lg group-hover:bg-amber-500/20 transition-colors">
-                      <info.icon className="w-5 h-5 text-amber-400" />
-                    </div>
-                    <div className="flex-1">
-                      <p className="text-gray-400 text-sm mb-1">{info.label}</p>
-                      {info.href ? (
-                        <a
-                          href={info.href}
-                          className="text-white hover:text-amber-400 transition-colors"
-                        >
-                          {info.value}
-                        </a>
-                      ) : (
-                        <p className="text-white">{info.value}</p>
-                      )}
-                    </div>
-                  </div>
-                </div>
-              ))}
+            {/* CTA Button */}
+            <div className="mt-8">
+              <a
+                href="mailto:gokie210402@gmail.com"
+                className="btn-primary inline-flex items-center space-x-2"
+              >
+                <Mail className="w-4 h-4" />
+                <span>Get In Touch</span>
+              </a>
             </div>
           </div>
 
-          {/* Right Column - Bio */}
-          <div className="space-y-8">
-            {/* Bio Card */}
-            <div className="glass rounded-2xl p-8 h-full">
-              <div className="mb-6">
-                <h3 className="text-2xl font-bold text-white mb-2">
-                  {bio.subtitle}
-                </h3>
-                <div className="w-20 h-1 bg-gradient-to-r from-amber-500 to-orange-600 rounded-full"></div>
-              </div>
-              
-              <div className="prose prose-invert max-w-none">
-                {bio.description.split('\n\n').map((paragraph, index) => (
-                  <p key={index} className="text-gray-300 leading-relaxed mb-4">
-                    {paragraph}
-                  </p>
-                ))}
-              </div>
-
-              {/* Key Highlights */}
-              <div className="mt-8 pt-6 border-t border-white/10">
-                <h4 className="text-lg font-semibold text-white mb-4">Key Highlights</h4>
-                <div className="grid grid-cols-2 gap-4">
-                  <div className="flex items-center space-x-2">
-                    <div className="w-2 h-2 bg-amber-400 rounded-full"></div>
-                    <span className="text-gray-300 text-sm">B.Tech CSBS (2024)</span>
-                  </div>
-                  <div className="flex items-center space-x-2">
-                    <div className="w-2 h-2 bg-amber-400 rounded-full"></div>
-                    <span className="text-gray-300 text-sm">Full-Stack Development</span>
-                  </div>
-                  <div className="flex items-center space-x-2">
-                    <div className="w-2 h-2 bg-amber-400 rounded-full"></div>
-                    <span className="text-gray-300 text-sm">Java & Spring Boot</span>
-                  </div>
-                  <div className="flex items-center space-x-2">
-                    <div className="w-2 h-2 bg-amber-400 rounded-full"></div>
-                    <span className="text-gray-300 text-sm">React.js & Modern Web</span>
-                  </div>
+          {/* Personal Information Cards */}
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            {personalInfo.map((info, index) => (
+              <div
+                key={index}
+                className="glass rounded-xl p-6 card-hover group text-center"
+              >
+                <div className="p-3 bg-amber-500/10 rounded-lg group-hover:bg-amber-500/20 transition-colors inline-flex items-center justify-center mb-3">
+                  <info.icon className="w-6 h-6 text-amber-400" />
                 </div>
+                <p className="text-gray-400 text-sm mb-2">{info.label}</p>
+                {info.href ? (
+                  <a
+                    href={info.href}
+                    className="text-white hover:text-amber-400 transition-colors font-medium"
+                  >
+                    {info.value}
+                  </a>
+                ) : (
+                  <p className="text-white font-medium">{info.value}</p>
+                )}
               </div>
-
-              {/* CTA Button */}
-              <div className="mt-8">
-                <a
-                  href="mailto:gokie210402@gmail.com"
-                  className="btn-primary inline-flex items-center space-x-2"
-                >
-                  <Mail className="w-4 h-4" />
-                  <span>Get In Touch</span>
-                </a>
-              </div>
-            </div>
+            ))}
           </div>
         </div>
       </div>

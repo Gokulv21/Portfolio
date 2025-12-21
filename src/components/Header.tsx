@@ -31,8 +31,12 @@ const Header = () => {
   };
 
   const handleDownloadResume = () => {
-    // Placeholder for resume download
-    alert('Resume download functionality will be implemented here');
+    const link = document.createElement('a');
+    link.href = `${process.env.PUBLIC_URL}/Gokul_Resume.pdf`;
+    link.download = 'Gokul_Resume.pdf';
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
   };
 
   return (
@@ -48,9 +52,9 @@ const Header = () => {
         {/* Logo */}
         <div className="flex items-center space-x-2">
           <div className="w-10 h-10 rounded-lg overflow-hidden border-2 border-amber-500/30">
-            <img 
-              src="/gokul-photo.jpeg" 
-              alt="Gokul" 
+            <img
+              src={`${process.env.PUBLIC_URL}/gokul-photo.jpeg`}
+              alt="Gokul"
               className="w-full h-full object-cover"
             />
           </div>

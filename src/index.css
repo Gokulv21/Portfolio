@@ -85,6 +85,152 @@
   }
 }
 
+/* Cricket Ball Container and Animation */
+.cricket-ball-container {
+  position: fixed;
+  top: 6vh;
+  right: 6vw;
+  width: 260px;
+  height: 260px;
+  pointer-events: none;
+  z-index: 40;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: visible;
+  animation: cricket-ball-path 6s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+  animation-delay: 0.5s;
+  opacity: 0;
+}
+
+.cricket-ball-container::before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 320px;
+  height: 320px;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  background: radial-gradient(circle at 30% 30%, rgba(224, 150, 22, 0.18), rgba(255,140,0,0.06));
+  box-shadow: 0 12px 40px rgba(0,0,0,0.45), inset 0 1px 0 rgba(255,255,255,0.02);
+  z-index: 1;
+}
+
+.cricket-ball-image {
+  width: auto;
+  height: 250px;
+  max-width: 320px;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 20%; /* keep full image, don't crop hair */
+  position: relative;
+  z-index: 2;
+}
+
+/* Hide the ball while scrolling */
+.cricket-ball-hidden {
+  opacity: 1 !important;
+  transform: translateY(30px) translateX(-1120px) !important;
+  transition: opacity 320ms ease, transform 320ms ease-out;
+  pointer-events: none;
+}
+
+
+/* Parabola-like bounce across the viewport. The image keeps its size; only the circle/background moves. */
+@keyframes cricket-ball-path {
+  0% {
+    opacity: 1;
+    transform: translate(0, -4vh) rotate(0deg) scale(.5);
+  }
+  25% {
+    opacity: 1;
+    transform: translate(-18vw, 60vh) rotate(-90deg) scale(.8);
+  }
+  45% {
+    opacity: 1;
+    transform: translate(-36vw, 30vh) rotate(-180deg)scale(1);
+  }
+  65% {
+    opacity: 1;
+    transform: translate(-45vw, 60vh) rotate(-270deg) scale(1.2);
+  }
+  /* 85% {
+    opacity: 1;
+    transform: translate(-34vw, 70vh);
+  } */
+  100% {
+    opacity: 1;
+    transform: translate(-60vw, 30vh) rotate(-360deg) scale(1.5);
+  }
+}
+
+/* Scroll-triggered animations */
+
+@keyframes slide-in-from-right {
+  0% {
+    transform: translateX(100px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slide-in-from-left {
+  0% {
+    transform: translateX(-100px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.animate-on-scroll {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s ease-out;
+}
+
+.animate-on-scroll.animate-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.animate-slide-right {
+  opacity: 0;
+  transform: translateX(100px);
+  transition: all 1s ease-out;
+}
+
+.animate-slide-right.animate-visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.animate-slide-left {
+  opacity: 0;
+  transform: translateX(-100px);
+  transition: all 1s ease-out;
+}
+
+.animate-slide-left.animate-visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* Staggered animation delays */
+.animate-slide-right:nth-child(1).animate-visible { transition-delay: 0.2s; }
+.animate-slide-right:nth-child(2).animate-visible { transition-delay: 0.4s; }
+.animate-slide-right:nth-child(3).animate-visible { transition-delay: 0.6s; }
+
+.animate-slide-left:nth-child(1).animate-visible { transition-delay: 0.2s; }
+.animate-slide-left:nth-child(2).animate-visible { transition-delay: 0.4s; }
+.animate-slide-left:nth-child(3).animate-visible { transition-delay: 0.6s; }
+
 /* Custom scrollbar */
 ::-webkit-scrollbar {
   width: 8px;

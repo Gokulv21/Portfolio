@@ -1,0 +1,32 @@
+Gokul - Full-Stack Developer Resume
+
+Contact Information:
+Name: Gokul
+Email: gokie210402@gmail.com
+Phone: +91 9585052446
+Location: India
+
+Education:
+B.Tech in Computer Science and Business Systems (2024)
+
+Skills:
+- Java & Spring Boot
+- React.js & TypeScript
+- Database Design
+- RESTful APIs
+- Git & GitHub
+- Docker & AWS
+
+Experience:
+Full-Stack Developer (2023 - Present)
+- Developed scalable backend solutions using Java and Spring Boot
+- Built responsive frontend applications with React.js
+- Implemented RESTful APIs and database architectures
+- Collaborated on travel booking and healthcare applications
+
+Projects:
+- Travel Booking Platform
+- Healthcare Mobile App
+- Hotel Management System
+
+Please replace this placeholder with your actual resume PDF file.
