@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Menu, X, Github, Linkedin, Mail, Phone, Download } from 'lucide-react';
-import { cn } from '../lib/utils.ts';
+import { cn } from '../lib/utils.js';
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -24,7 +24,7 @@ const Header = () => {
     { label: 'Contact', href: '#contact' }
   ];
 
-  const handleNavClick = (href: string) => {
+  const handleNavClick = (href) => {
     const element = document.querySelector(href);
     element?.scrollIntoView({ behavior: 'smooth' });
     setIsMobileMenuOpen(false);

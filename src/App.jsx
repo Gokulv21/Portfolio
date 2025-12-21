@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import Header from './components/Header.tsx';
-import About from './components/About.tsx';
-import { useScrollAnimation } from './hooks/useScrollAnimation.ts';
+import Header from './components/Header.jsx';
+import About from './components/About.jsx';
+import { useScrollAnimation } from './hooks/useScrollAnimation.js';
 
 const App = () => {
   const skillsRef = useScrollAnimation();
