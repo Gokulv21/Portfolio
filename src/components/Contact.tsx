@@ -44,6 +44,14 @@ export function Contact() {
     const templateId = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
     const publicKey = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
 
+    console.log('Vite Environment Keys Loaded State:', {
+      VITE_EMAILJS_SERVICE_ID: serviceId ? "Present (Length: " + serviceId.length + ")" : "Missing/Empty",
+      VITE_EMAILJS_TEMPLATE_ID: templateId ? "Present (Length: " + templateId.length + ")" : "Missing/Empty",
+      VITE_EMAILJS_PUBLIC_KEY: publicKey ? "Present (Length: " + publicKey.length + ")" : "Missing/Empty",
+      MODE: import.meta.env.MODE,
+      DEV: import.meta.env.DEV
+    });
+
     if (!serviceId || !templateId || !publicKey) {
       // Mock successful email dispatch in local/dev fallback environments
       console.log('EmailJS variables missing. Simulating sending data:', data);
