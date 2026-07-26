@@ -135,12 +135,12 @@
     "title": "保有資格",
     "subtitle": "実力を証明する公式の技術資格。",
     "items": [
-      { "name": "Microsoft 認定: Azure Fundamentals", "issuer": "Microsoft", "date": "2023年5月16日" },
-      { "name": "AWS 認定 クラウドプラクティショナー", "issuer": "Amazon Web Services", "date": "2023年5月9日" },
-      { "name": "Microsoft 認定: Power Platform Fundamentals", "issuer": "Microsoft", "date": "2023年5月11日" },
-      { "name": "Android アプリ開発者 (インターンシップ証明)", "issuer": "Exposys Data Labs", "date": "2023年4月15日" },
-      { "name": "Python Basics for Data Science", "issuer": "IBM Cognitive Class", "date": "2022年6月20日" },
-      { "name": "Introduction to Cloud Development with HTML, CSS, and JS", "issuer": "IBM", "date": "2022年3月23日" }
+      { "name": "Microsoft 認定: Azure Fundamentals", "issuer": "Microsoft", "date": "2023年5月16日", "url": "https://drive.google.com/file/d/1uAVIDewAAd8l14T7CN7CEzkuWs3ZXRPb/view" },
+      { "name": "AWS 認定 クラウドプラクティショナー", "issuer": "Amazon Web Services", "date": "2023年5月9日", "url": "https://courses.edx.org/certificates/bff6d5c5cfe34bc5a6c920d6e4ce0459" },
+      { "name": "Microsoft 認定: Power Platform Fundamentals", "issuer": "Microsoft", "date": "2023年5月11日", "url": "https://drive.google.com/file/d/1wXdSF3PXIW2_HmXJVbVV8xDHnq_AhJhl/view" },
+      { "name": "Android アプリ開発者 (インターンシップ証明)", "issuer": "Exposys Data Labs", "date": "2023年4月15日", "url": "https://drive.google.com/file/d/1KY3GCb2FxhYV3u0fR4fWCCd7U4dWF_tS/view" },
+      { "name": "Python Basics for Data Science", "issuer": "IBM Cognitive Class", "date": "2022年6月20日", "url": "https://courses.edx.org/certificates/984e3bb34e4d4209afb259ccba38dfd5" },
+      { "name": "Introduction to Cloud Development with HTML, CSS, and JS", "issuer": "IBM", "date": "2022年3月23日", "url": "https://courses.edx.org/certificates/57af80e0d13b400492c2ade2d1280a1c" }
     ]
   },
   "contact": {

@@ -135,12 +135,12 @@
     "title": "சான்றிதழ்கள்",
     "subtitle": "அங்கீகரிக்கப்பட்ட தொழில்முறை சான்றிதழ்கள்.",
     "items": [
-      { "name": "Microsoft Certified: Azure Fundamentals", "issuer": "Microsoft", "date": "மே 16, 2023" },
-      { "name": "AWS Certified Cloud Practitioner", "issuer": "Amazon Web Services", "date": "மே 09, 2023" },
-      { "name": "Microsoft Certified: Power Platform Fundamentals", "issuer": "Microsoft", "date": "மே 11, 2023" },
-      { "name": "Android App Developer (பயிற்சிச் சான்றிதழ்)", "issuer": "Exposys Data Labs", "date": "ஏப்ரல் 15, 2023" },
-      { "name": "Python Basics for Data Science", "issuer": "IBM Cognitive Class", "date": "ஜூன் 20, 2022" },
-      { "name": "Introduction to Cloud Development with HTML, CSS, and JS", "issuer": "IBM", "date": "மார்ச் 23, 2022" }
+      { "name": "Microsoft Certified: Azure Fundamentals", "issuer": "Microsoft", "date": "மே 16, 2023", "url": "https://drive.google.com/file/d/1uAVIDewAAd8l14T7CN7CEzkuWs3ZXRPb/view" },
+      { "name": "AWS Certified Cloud Practitioner", "issuer": "Amazon Web Services", "date": "மே 09, 2023", "url": "https://courses.edx.org/certificates/bff6d5c5cfe34bc5a6c920d6e4ce0459" },
+      { "name": "Microsoft Certified: Power Platform Fundamentals", "issuer": "Microsoft", "date": "மே 11, 2023", "url": "https://drive.google.com/file/d/1wXdSF3PXIW2_HmXJVbVV8xDHnq_AhJhl/view" },
+      { "name": "Android App Developer (பயிற்சிச் சான்றிதழ்)", "issuer": "Exposys Data Labs", "date": "ஏப்ரல் 15, 2023", "url": "https://drive.google.com/file/d/1KY3GCb2FxhYV3u0fR4fWCCd7U4dWF_tS/view" },
+      { "name": "Python Basics for Data Science", "issuer": "IBM Cognitive Class", "date": "ஜூன் 20, 2022", "url": "https://courses.edx.org/certificates/984e3bb34e4d4209afb259ccba38dfd5" },
+      { "name": "Introduction to Cloud Development with HTML, CSS, and JS", "issuer": "IBM", "date": "மார்ச் 23, 2022", "url": "https://courses.edx.org/certificates/57af80e0d13b400492c2ade2d1280a1c" }
     ]
   },
   "contact": {

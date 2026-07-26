@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
-import { ExternalLink, Github, ChevronDown, ChevronUp, Layers, HelpCircle, Award } from 'lucide-react';
+import { ExternalLink, ChevronDown, ChevronUp, Layers, HelpCircle, Award } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useMouseGlow } from '../hooks/useMouseGlow';
 
@@ -29,8 +29,6 @@ export function Projects() {
   const flagship = t('projects.prescripto', { returnObjects: true }) as FlagshipProject;
   const hrms = t('projects.hrms', { returnObjects: true }) as { name: string; tagline: string; description: string };
   const staybite = t('projects.staybite', { returnObjects: true }) as { name: string; tagline: string; description: string };
-  const infoview = t('projects.infoview', { returnObjects: true }) as { name: string; tagline: string; description: string };
-  const biometric = t('projects.biometric', { returnObjects: true }) as { name: string; tagline: string; description: string };
   const health247 = t('projects.health247', { returnObjects: true }) as { name: string; tagline: string; description: string };
 
   const reusableProjects = [
@@ -40,8 +38,7 @@ export function Projects() {
       desc: hrms.description,
       tech: 'React, TypeScript, Tailwind, Chart.js, Spring Boot',
       img: '/images/hrms.png',
-      github: '#',
-      live: '#',
+      documentUrl: 'https://drive.google.com/drive/folders/your-hrms-doc-id-placeholder',
     },
     {
       name: staybite.name,
@@ -49,8 +46,7 @@ export function Projects() {
       desc: staybite.description,
       tech: 'React Native, Spring Boot, Socket.io, MySQL',
       img: '/images/staybite.png',
-      github: '#',
-      live: '#',
+      documentUrl: 'https://drive.google.com/drive/folders/your-staybite-doc-id-placeholder',
     },
     {
       name: health247.name,
@@ -58,26 +54,7 @@ export function Projects() {
       desc: health247.description,
       tech: 'Android, Java, XML, Exposys Data Labs',
       img: '/images/staybite.png',
-      github: '#',
-      live: '/Gokul_Resume.pdf',
-    },
-    {
-      name: infoview.name,
-      tagline: infoview.tagline,
-      desc: infoview.description,
-      tech: 'Java, MySQL, Android Studio',
-      img: '/images/hrms.png',
-      github: '#',
-      live: '#',
-    },
-    {
-      name: biometric.name,
-      tagline: biometric.tagline,
-      desc: biometric.description,
-      tech: 'Java, Machine Learning, Keystroke Dynamics',
-      img: '/images/staybite.png',
-      github: '#',
-      live: '#',
+      documentUrl: 'https://drive.google.com/drive/folders/your-health247-doc-id-placeholder',
     },
   ];
 
@@ -191,17 +168,12 @@ export function Projects() {
 
                     <div className="flex items-center gap-3">
                       <a
-                        href="#"
-                        className="p-2.5 rounded-full bg-zinc-900 border border-zinc-800 text-gray-400 hover:text-white transition-colors"
-                        title={t('projects.view_github')}
+                        href="https://drive.google.com/drive/folders/1eBY21Bd34zisOC1vtRst534_Xiyoch80?usp=drive_link"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center gap-2.5 px-5 py-2.5 rounded-full text-xs font-bold bg-brand-red hover:bg-brand-red-hover text-white transition-colors"
                       >
-                        <Github className="w-4 h-4" />
-                      </a>
-                      <a
-                        href="#"
-                        className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full text-xs font-bold bg-brand-red hover:bg-brand-red-hover text-white transition-colors"
-                      >
-                        {t('projects.visit_site')}
+                        View Project Document
                         <ExternalLink className="w-3.5 h-3.5" />
                       </a>
                     </div>
@@ -311,18 +283,13 @@ export function Projects() {
                   {/* Actions */}
                   <div className="flex items-center gap-3 pt-2">
                     <a
-                      href={proj.github}
-                      className="p-2 rounded-full bg-zinc-900 border border-zinc-800 text-gray-400 hover:text-white transition-colors"
-                      title={t('projects.view_github')}
+                      href={proj.documentUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-1.5 px-4 py-2 rounded-full text-xs font-semibold bg-brand-red hover:bg-brand-red-hover text-white transition-colors"
                     >
-                      <Github className="w-3.5 h-3.5" />
-                    </a>
-                    <a
-                      href={proj.live}
-                      className="inline-flex items-center gap-1.5 px-4 py-2 rounded-full text-xs font-semibold bg-zinc-900 hover:bg-zinc-800 border border-zinc-800 text-white transition-colors"
-                    >
-                      {t('projects.visit_site')}
-                      <ExternalLink className="w-3 h-3" />
+                      View Project Document
+                      <ExternalLink className="w-3.5 h-3.5" />
                     </a>
                   </div>
                 </div>
