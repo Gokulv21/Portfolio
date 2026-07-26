@@ -1,0 +1,164 @@
+{
+  "nav": {
+    "about": "About",
+    "experience": "Experience",
+    "projects": "Projects",
+    "tech": "Stack",
+    "roadmap": "Roadmap",
+    "certifications": "Certifications",
+    "contact": "Contact",
+    "lang_hint": "Click here for Japanese and Tamil"
+  },
+  "hero": {
+    "role_engineer": "Software Engineer",
+    "role_stack": "Java Fullstack Engineer & Freelancer",
+    "location": "Based in Tokyo, Japan",
+    "tagline": "Building high-performance, enterprise-grade systems and scalable web applications.",
+    "typing": [
+      "Developing robust Spring Boot backend services...",
+      "Crafting interactive frontend web applications...",
+      "Designing relational databases and query pipelines...",
+      "Deploying scalable cloud infrastructure..."
+    ],
+    "btn_resume": "Download Resume",
+    "btn_projects": "Explore Projects",
+    "btn_contact": "Get in touch"
+  },
+  "about": {
+    "title": "My Journey",
+    "subtitle": "A timeline of development, architecture, and deployments.",
+    "milestones": [
+      {
+        "year": "2025 - Present",
+        "title": "Java Fullstack Engineer & Freelance Developer",
+        "description": "Collaborating on client projects, deploying full-stack architectures using Java, Spring Boot, and modern web frameworks."
+      },
+      {
+        "year": "2024",
+        "title": "Graduated B.Tech in Computer Science",
+        "description": "Graduated from Sri Manakula Vinayagar Engineering College with a B.Tech in Computer Science and Business Systems."
+      },
+      {
+        "year": "2023",
+        "title": "Internship - Exposys Data Labs",
+        "description": "Completed internship as an Android App Developer, building the '24/7 health and care' application. Validated with official industry certification."
+      },
+      {
+        "year": "2020",
+        "title": "Began B.Tech CSBS Degree",
+        "description": "Started academic foundation in computer science, software engineering concepts, database architecture, and programming paradigms."
+      }
+    ]
+  },
+  "experience": {
+    "title": "Experience",
+    "subtitle": "Professional history with modern product development teams.",
+    "roles": [
+      {
+        "period": "2025 - 2026",
+        "company": "Freelance & Enterprise Projects",
+        "role": "Java Fullstack Engineer",
+        "points": [
+          "Engineered Java full-stack applications with Spring Boot backend APIs and React frontend layers.",
+          "Designed database schemas using PostgreSQL/MySQL and optimized query search latencies.",
+          "Delivered secure authentication pipelines using Spring Security, OAuth2, and JWT tokens."
+        ]
+      },
+      {
+        "period": "Nov 2025 - Jan 2026",
+        "company": "JK Global IT Solutions",
+        "role": "Software Developer",
+        "points": [
+          "Developed and maintained client websites and business solutions using React, HTML, CSS, JavaScript, and Java.",
+          "Contributed to building a responsive Hotel Booking Engine, implementing scheduling flows and APIs.",
+          "Optimized application performance and maintainability through reusable frontend components."
+        ]
+      }
+    ]
+  },
+  "projects": {
+    "title": "Featured Works",
+    "subtitle": "Production-grade projects designed with extreme care and detail.",
+    "visit_site": "Live Demo",
+    "view_github": "GitHub Repository",
+    "flagship": "Flagship Project (Real-world)",
+    "prescripto": {
+      "name": "Prescripto",
+      "tagline": "Modern E-Prescription & Clinic Management System",
+      "overview": "A production-grade, tablet-optimized clinic management platform engineered for a real-world healthcare practice. Currently utilized by Gokul's brother for his active clinic.",
+      "architecture": "Configured with a React front-end interface, Supabase serverless database layer, PostgreSQL relational schema, and custom handwriting rendering engine with Apple Pencil pressure sensitivity.",
+      "tech": "React, TypeScript, Supabase, PostgreSQL, Tailwind CSS",
+      "features": "Real-time clinic queue management, patient vitals tracking, prescription history, handwritten digital prescription canvas.",
+      "challenges": "Synchronizing real-time queue states dynamically across multiple devices while preventing appointment conflicts.",
+      "results": "Deployed live and currently active in-clinic. Slashed prescription processing time and improved patient record lookup speeds by 50%."
+    },
+    "infoview": {
+      "name": "Info View",
+      "tagline": "Educational Communication Platform",
+      "description": "Android application developed as a college project to streamline communication. Enables students, parents, and faculty to view announcements, internship opportunities, hackathon updates, and placements."
+    },
+    "biometric": {
+      "name": "Behavioral Biometric Authentication",
+      "tagline": "Final Year Machine Learning Project",
+      "description": "Developed a behavior-based authentication system analyzing keystroke dynamics and mouse movements to continually validate user identity and enhance online transactional security."
+    },
+    "health247": {
+      "name": "24/7 Health and Care",
+      "tagline": "Internship Project - Android App Developer",
+      "description": "Designed and implemented an Android mobile application for health tracking, appointment scheduling, and telemedicine support during internship at Exposys Data Labs."
+    }
+  },
+  "tech": {
+    "title": "Tech Stack",
+    "subtitle": "The languages, frameworks, and workflows I master.",
+    "frontend": "Frontend",
+    "backend": "Backend / DB",
+    "devops": "DevOps & Tools"
+  },
+  "roadmap": {
+    "title": "Current Learning Roadmap",
+    "subtitle": "Technologies I'm actively researching and adding to my arsenal.",
+    "status": {
+      "completed": "Completed",
+      "in_progress": "In Progress",
+      "next_up": "Next Up"
+    },
+    "items": [
+      { "name": "Spring Boot", "status": "completed", "desc": "Mastered building production-grade enterprise Java microservices." },
+      { "name": "Japanese Language", "status": "in_progress", "desc": "Actively learning professional and conversational Japanese." },
+      { "name": "SAP S/4HANA", "status": "in_progress", "desc": "Gaining deep expertise in enterprise resource planning orchestration." },
+      { "name": "SAP ABAP", "status": "in_progress", "desc": "Learning advanced business application programming for S/4HANA workflows." },
+      { "name": "SAP BTP (Business Technology Platform)", "status": "next_up", "desc": "Next goal: building and extending cloud solutions with SAP integrations." }
+    ]
+  },
+  "certifications": {
+    "title": "Certifications",
+    "subtitle": "Validated industry qualifications.",
+    "items": [
+      { "name": "Microsoft Certified: Azure Fundamentals", "issuer": "Microsoft", "date": "May 16, 2023" },
+      { "name": "AWS Cloud Practitioner Essentials", "issuer": "Amazon Web Services", "date": "May 09, 2023" },
+      { "name": "Microsoft Certified: Power Platform Fundamentals", "issuer": "Microsoft", "date": "May 11, 2023" },
+      { "name": "Android App Developer (Internship Certificate)", "issuer": "Exposys Data Labs", "date": "April 15, 2023" },
+      { "name": "Python Basics for Data Science", "issuer": "IBM Cognitive Class", "date": "June 20, 2022" },
+      { "name": "Introduction to Cloud Development with HTML, CSS, and JS", "issuer": "IBM", "date": "March 23, 2022" }
+    ]
+  },
+  "contact": {
+    "title": "Get In Touch",
+    "subtitle": "Let's build something beautiful, performant, and premium.",
+    "name": "Name",
+    "email": "Email Address",
+    "message": "Project Details",
+    "send": "Send Message",
+    "sending": "Sending...",
+    "success": "Message received! Gokul will get back to you shortly.",
+    "error": "Failed to send message. Please email directly at gokie210402@gmail.com",
+    "name_required": "Please provide your name.",
+    "email_invalid": "Please enter a valid email address.",
+    "message_required": "Please tell me a bit about your project or query."
+  },
+  "footer": {
+    "rights": "All Rights Reserved.",
+    "design_by": "Designed & Coded with passion."
+  }
+}

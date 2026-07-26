@@ -1,0 +1,164 @@
+{
+  "nav": {
+    "about": "経歴",
+    "experience": "職務経歴",
+    "projects": "開発実績",
+    "tech": "スキルスタック",
+    "roadmap": "学習ロードマップ",
+    "certifications": "保有資格",
+    "contact": "お問い合わせ",
+    "lang_hint": "日本語・タミル語はこちらをクリック"
+  },
+  "hero": {
+    "role_engineer": "ソフトウェアエンジニア",
+    "role_stack": "Javaフルスタックエンジニア ＆ フリーランサー",
+    "location": "東京（日本）在住",
+    "tagline": "エンタープライズ向けの堅牢なバックエンド、高パフォーマンスなWebアプリケーションを構築します。",
+    "typing": [
+      "Spring Bootを用いた堅牢なバックエンドの構築...",
+      "双方向性の高いWebアプリケーションの開発...",
+      "リレーショナルデータベースと検索クエリの最適化...",
+      "クラウドインフラへのスケーラブルなデプロイ..."
+    ],
+    "btn_resume": "レジュメをダウンロード",
+    "btn_projects": "実績を見る",
+    "btn_contact": "お問い合わせ"
+  },
+  "about": {
+    "title": "これまでの歩み",
+    "subtitle": "開発、アーキテクチャ設計、デプロイのタイムライン。",
+    "milestones": [
+      {
+        "year": "2025年 - 現在",
+        "title": "Javaフルスタックエンジニア ＆ フリーランス開発",
+        "description": "クライアントの多様なプロジェクトに参画し、Java、Spring Boot、モダンなWebフロントエンドを用いたフルスタックアーキテクチャの構築。"
+      },
+      {
+        "year": "2024年",
+        "title": "大学卒業（工学士号取得）",
+        "description": "Sri Manakula Vinayagar Engineering College（CSBSコース）を卒業。"
+      },
+      {
+        "year": "2023年",
+        "title": "Exposys Data Labsでのインターンシップ",
+        "description": "Androidアプリデベロッパーとして、健康管理アプリケーション「24/7 health and care」の開発に従事。公式修了資格を取得。"
+      },
+      {
+        "year": "2020年",
+        "title": "大学（工学士 CSBS専攻）入学",
+        "description": "コンピュータサイエンス、ソフトウェアエンジニアリング、データベース設計、およびプログラミング言語の基礎研究を開始。"
+      }
+    ]
+  },
+  "experience": {
+    "title": "職務経歴",
+    "subtitle": "最先端のプロダクト開発チームでの実績。",
+    "roles": [
+      {
+        "period": "2025年 - 2026年",
+        "company": "フリーランス ＆ 企業向けシステム開発",
+        "role": "Javaフルスタックエンジニア",
+        "points": [
+          "Spring BootバックエンドAPIとReactフロントエンドを組み合わせたJavaフルスタック開発の設計・実装。",
+          "PostgreSQL/MySQLを用いた効率的なデータベース設計、およびクエリ検索レスポンスの高速化。",
+          "Spring Security、OAuth2、およびJWTトークンを用いた安全な認証システムの開発。"
+        ]
+      },
+      {
+        "period": "2025年11月 - 2026年1月",
+        "company": "JK Global IT Solutions",
+        "role": "ソフトウェアデベロッパー",
+        "points": [
+          "React、HTML、CSS、JavaScript、Java、およびFirebaseを用いた、複数クライアント向けWebサイトやソリューションの開発・保守。",
+          "ホテルのオンライン予約システム（Hotel Booking Engine）の開発、予約処理フローおよび連携APIの実装。",
+          "コンポーネント指向に基づいた再利用性の高い設計による、アプリケーションの保守性と速度の向上。"
+        ]
+      }
+    ]
+  },
+  "projects": {
+    "title": "開発実績",
+    "subtitle": "細部まで徹底的にこだわり、設計されたプロダクトグレードの実績。",
+    "visit_site": "ライブデモ",
+    "view_github": "GitHubで見る",
+    "flagship": "フラッグシッププロジェクト（実運用中）",
+    "prescripto": {
+      "name": "Prescripto",
+      "tagline": "電子処方箋 ＆ クリニック総合管理システム",
+      "overview": "実際の医療現場向けに開発され、タブレット向けに最適化された総合クリニック管理プラットフォーム。現在、開発者の兄が経営するクリニックで実際に導入されています。",
+      "architecture": "Reactフロントエンド、Supabaseサーバーレスデータベース層、PostgreSQLによるリレーショナル設計。Apple Pencilの筆圧検知に対応したデジタル手書き署名キャンバスを独自搭載。",
+      "tech": "React, TypeScript, Supabase, PostgreSQL, Tailwind CSS",
+      "features": "院内リアルタイムキュー管理、患者のバイタル記録、処方履歴、手書き処方箋の作成機能。",
+      "challenges": "複数端末間における診察順序（キュー）のリアルタイムでの整合性確保、同時更新競合の排除。",
+      "results": "現場での実運用を開始。カルテの検索および処方箋発行の時間を従来比で50%短縮することに成功。"
+    },
+    "infoview": {
+      "name": "Info View",
+      "tagline": "教育機関向けコミュニケーションアプリ",
+      "description": "大学内プロジェクトとして開発されたAndroidアプリ。学生、保護者、教員間の連絡を迅速化し、学内アナウンス、インターンシップ情報、ハッカソン開催、就職実績などを一元管理します。"
+    },
+    "biometric": {
+      "name": "Behavioral Biometric Authentication",
+      "tagline": "行動的生体認証システム（卒業研究）",
+      "description": "キーストローク（打鍵）の特徴やマウス操作の動きを機械学習で分析し、ユーザーを動的に継続認証するセキュリティシステム。"
+    },
+    "health247": {
+      "name": "24/7 Health and Care",
+      "tagline": "インターンシップ開発アプリ",
+      "description": "Exposys Data Labsでのインターンシップ中に設計・実装したAndroid向けヘルスケア・オンライン診療予約アプリ。"
+    }
+  },
+  "tech": {
+    "title": "スキルスタック",
+    "subtitle": "実務で培った言語、フレームワーク、およびインフラ開発ツール。",
+    "frontend": "フロントエンド",
+    "backend": "バックエンド / データベース",
+    "devops": "DevOps / 開発ツール"
+  },
+  "roadmap": {
+    "title": "現在の学習ロードマップ",
+    "subtitle": "現在積極的に学習し、技術スタックに追加している先端テクノロジー。",
+    "status": {
+      "completed": "完了",
+      "in_progress": "学習中",
+      "next_up": "次に学習"
+    },
+    "items": [
+      { "name": "Spring Boot", "status": "completed", "desc": "実用的なエンタープライズJavaマイクロサービスの設計と開発スキルを修得。" },
+      { "name": "日本語", "status": "in_progress", "desc": "日常会話からビジネスレベルの実用的な日本語を習得中。" },
+      { "name": "SAP S/4HANA", "status": "in_progress", "desc": "基幹業務システム（ERP）の構成とプロセス制御の高度な学習。" },
+      { "name": "SAP ABAP", "status": "in_progress", "desc": "S/4HANA向けアドオン開発用のビジネスアプリケーションプログラミング。" },
+      { "name": "SAP BTP (Business Technology Platform)", "status": "next_up", "desc": "次期計画：SAP環境との統合およびクラウドサービスの拡張手法の学習。" }
+    ]
+  },
+  "certifications": {
+    "title": "保有資格",
+    "subtitle": "実力を証明する公式の技術資格。",
+    "items": [
+      { "name": "Microsoft 認定: Azure Fundamentals", "issuer": "Microsoft", "date": "2023年5月16日" },
+      { "name": "AWS 認定 クラウドプラクティショナー", "issuer": "Amazon Web Services", "date": "2023年5月9日" },
+      { "name": "Microsoft 認定: Power Platform Fundamentals", "issuer": "Microsoft", "date": "2023年5月11日" },
+      { "name": "Android アプリ開発者 (インターンシップ証明)", "issuer": "Exposys Data Labs", "date": "2023年4月15日" },
+      { "name": "Python Basics for Data Science", "issuer": "IBM Cognitive Class", "date": "2022年6月20日" },
+      { "name": "Introduction to Cloud Development with HTML, CSS, and JS", "issuer": "IBM", "date": "2022年3月23日" }
+    ]
+  },
+  "contact": {
+    "title": "お問い合わせ",
+    "subtitle": "美しく、高品質で、高性能なシステムを一緒に作りましょう。",
+    "name": "お名前",
+    "email": "メールアドレス",
+    "message": "プロジェクトやご相談の詳細",
+    "send": "メッセージを送信",
+    "sending": "送信中...",
+    "success": "メッセージを送信しました。折り返しご連絡いたします。",
+    "error": "送信に失敗しました。gokie210402@gmail.com まで直接ご連絡ください。",
+    "name_required": "お名前を入力してください。",
+    "email_invalid": "有効なメールアドレスを入力してください。",
+    "message_required": "プロジェクト内容やお問い合せ内容を入力してください。"
+  },
+  "footer": {
+    "rights": "All Rights Reserved.",
+    "design_by": "Designed & Coded with passion."
+  }
+}
