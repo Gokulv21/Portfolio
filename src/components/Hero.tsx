@@ -140,7 +140,7 @@ export function Hero() {
             <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent z-10 pointer-events-none" />
             <img
               src="/images/gokul.png"
-              alt="Gokul V"
+              alt={`${t('name_first')} ${t('name_last')}`}
               className="w-full h-full object-cover object-center grayscale hover:grayscale-0 transition-all duration-700"
             />
           </motion.div>
@@ -156,8 +156,8 @@ export function Hero() {
           </div>
 
           <div className="space-y-2">
-            <h1 className="font-display text-4xl sm:text-6xl font-extrabold tracking-tight text-white">
-              VENKATACHALAM <span className="text-transparent bg-clip-text bg-gradient-to-r from-white via-gray-300 to-zinc-500">GOKUL</span>
+            <h1 className="font-display text-4xl sm:text-6xl font-extrabold tracking-tight text-white uppercase">
+              {t('name_first')} <span className="text-transparent bg-clip-text bg-gradient-to-r from-white via-gray-300 to-zinc-500">{t('name_last')}</span>
             </h1>
             <h2 className="font-display text-xl sm:text-2xl font-semibold text-brand-red flex items-center gap-2">
               {t('hero.role_engineer')}

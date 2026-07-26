@@ -1,4 +1,6 @@
 {
+  "name_first": "Venkatachalam",
+  "name_last": "Gokul",
   "nav": {
     "about": "About",
     "experience": "Experience",
@@ -82,6 +84,8 @@
     "visit_site": "Live Demo",
     "view_github": "GitHub Repository",
     "flagship": "Flagship Project (Real-world)",
+    "view_document": "View Project Document",
+    "technical_deep_dive": "Technical Deep Dive",
     "prescripto": {
       "name": "Prescripto",
       "tagline": "Modern E-Prescription & Clinic Management System",
@@ -102,10 +106,15 @@
       "tagline": "Final Year Machine Learning Project",
       "description": "Developed a behavior-based authentication system analyzing keystroke dynamics and mouse movements to continually validate user identity and enhance online transactional security."
     },
-    "health247": {
-      "name": "24/7 Health and Care",
-      "tagline": "Internship Project - Android App Developer",
-      "description": "Designed and implemented an Android mobile application for health tracking, appointment scheduling, and telemedicine support during internship at Exposys Data Labs."
+    "hrms": {
+      "name": "WorkSphere",
+      "tagline": "Enterprise Human Resource Management System (HRMS)",
+      "description": "A comprehensive digital workspace and HRMS platform designed to streamline employee onboarding, attendance, performance tracking, payroll management, and department workflows."
+    },
+    "staybite": {
+      "name": "StayByte",
+      "tagline": "Premium Hotel Booking & Accommodation Engine",
+      "description": "A robust booking platform designed to facilitate seamless scheduling, room reservations, real-time availability checks, and customer notifications."
     }
   },
   "tech": {
@@ -141,7 +150,8 @@
       { "name": "Android App Developer (Internship Certificate)", "issuer": "Exposys Data Labs", "date": "April 15, 2023", "url": "https://drive.google.com/file/d/1KY3GCb2FxhYV3u0fR4fWCCd7U4dWF_tS/view" },
       { "name": "Python Basics for Data Science", "issuer": "IBM Cognitive Class", "date": "June 20, 2022", "url": "https://courses.edx.org/certificates/984e3bb34e4d4209afb259ccba38dfd5" },
       { "name": "Introduction to Cloud Development with HTML, CSS, and JS", "issuer": "IBM", "date": "March 23, 2022", "url": "https://courses.edx.org/certificates/57af80e0d13b400492c2ade2d1280a1c" }
-    ]
+    ],
+    "verify": "Verify"
   },
   "contact": {
     "title": "Get In Touch",

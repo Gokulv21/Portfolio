@@ -15,6 +15,119 @@ interface FlagshipProject {
   results: string;
 }
 
+interface ReusableProjectProps {
+  proj: {
+    name: string;
+    tagline: string;
+    desc: string;
+    tech: string;
+    imgs: string[];
+    documentUrl: string;
+  };
+  idx: number;
+}
+
+function ProjectCard({ proj, idx }: ReusableProjectProps) {
+  const { t } = useTranslation();
+  const [activeImgIndex, setActiveImgIndex] = useState(0);
+
+  return (
+    <motion.div
+      className="glass-card rounded-[28px] overflow-hidden flex flex-col justify-between"
+      initial={{ opacity: 0, y: 40 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.6, delay: idx * 0.15 }}
+    >
+      {/* Image Header with Carousel */}
+      <div className="aspect-video w-full overflow-hidden bg-zinc-950 border-b border-zinc-900 relative group">
+        <img
+          src={proj.imgs[activeImgIndex]}
+          alt={`${proj.name} Screenshot ${activeImgIndex + 1}`}
+          className="w-full h-full object-contain transition-all duration-500"
+        />
+
+        {/* Carousel Overlay Gradient */}
+        <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent pointer-events-none" />
+
+        {/* Left/Right Buttons */}
+        <button
+          onClick={() => setActiveImgIndex((prev) => (prev === 0 ? proj.imgs.length - 1 : prev - 1))}
+          className="absolute left-3 top-1/2 -translate-y-1/2 w-8 h-8 rounded-full bg-black/60 hover:bg-brand-red text-white flex items-center justify-center transition-colors duration-200 cursor-pointer z-10"
+          aria-label="Previous image"
+        >
+          &larr;
+        </button>
+        <button
+          onClick={() => setActiveImgIndex((prev) => (prev === proj.imgs.length - 1 ? 0 : prev + 1))}
+          className="absolute right-3 top-1/2 -translate-y-1/2 w-8 h-8 rounded-full bg-black/60 hover:bg-brand-red text-white flex items-center justify-center transition-colors duration-200 cursor-pointer z-10"
+          aria-label="Next image"
+        >
+          &rarr;
+        </button>
+
+        {/* Dots indicator */}
+        <div className="absolute bottom-3 left-1/2 -translate-x-1/2 flex gap-1.5 z-20">
+          {proj.imgs.map((_, dotIdx) => (
+            <button
+              key={dotIdx}
+              onClick={() => setActiveImgIndex(dotIdx)}
+              className={`w-1.5 h-1.5 rounded-full transition-all duration-300 cursor-pointer ${
+                activeImgIndex === dotIdx ? 'bg-brand-red w-3' : 'bg-white/40 hover:bg-white/70'
+              }`}
+              aria-label={`Go to slide ${dotIdx + 1}`}
+            />
+          ))}
+        </div>
+      </div>
+
+      {/* Card Body */}
+      <div className="p-6 sm:p-8 flex-1 flex flex-col justify-between space-y-6">
+        <div className="space-y-3">
+          <div>
+            <h4 className="font-display text-xl font-bold text-white">
+              {proj.name}
+            </h4>
+            <p className="text-xs text-brand-red font-semibold">
+              {proj.tagline}
+            </p>
+          </div>
+          <p className="text-zinc-400 text-xs sm:text-sm leading-relaxed">
+            {proj.desc}
+          </p>
+        </div>
+
+        <div className="space-y-4">
+          {/* Tech List */}
+          <div className="flex flex-wrap gap-1.5">
+            {proj.tech.split(', ').map((techItem, techIdx) => (
+              <span
+                key={techIdx}
+                className="text-[9px] font-mono px-2 py-0.5 rounded bg-zinc-900 border border-zinc-800 text-zinc-500"
+              >
+                {techItem}
+              </span>
+            ))}
+          </div>
+
+          {/* Actions */}
+          <div className="flex items-center gap-3 pt-2">
+            <a
+              href={proj.documentUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-1.5 px-4 py-2 rounded-full text-xs font-semibold bg-brand-red hover:bg-brand-red-hover text-white transition-colors"
+            >
+              {t('projects.view_document')}
+              <ExternalLink className="w-3.5 h-3.5" />
+            </a>
+          </div>
+        </div>
+      </div>
+    </motion.div>
+  );
+}
+
 export function Projects() {
   const { t } = useTranslation();
   const [showDeepDive, setShowDeepDive] = useState(false);
@@ -26,10 +139,41 @@ export function Projects() {
     '/images/prescripto/Screenshot 2026-07-26 221033.png'
   ];
 
+  const worksphereScreenshots = [
+    '/images/worksphere/Screenshot 2026-07-27 020256.png',
+    '/images/worksphere/Screenshot 2026-07-27 020331.png',
+    '/images/worksphere/Screenshot 2026-07-27 020342.png',
+    '/images/worksphere/Screenshot 2026-07-27 020356.png',
+    '/images/worksphere/Screenshot 2026-07-27 020407.png',
+    '/images/worksphere/Screenshot 2026-07-27 020422.png',
+    '/images/worksphere/Screenshot 2026-07-27 020433.png',
+    '/images/worksphere/Screenshot 2026-07-27 020442.png',
+    '/images/worksphere/Screenshot 2026-07-27 020454.png',
+    '/images/worksphere/Screenshot 2026-07-27 020505.png'
+  ];
+
+  const staybyteScreenshots = [
+    '/images/staybyte/Screenshot 2026-07-27 021658.png',
+    '/images/staybyte/Screenshot 2026-07-27 021711.png',
+    '/images/staybyte/Screenshot 2026-07-27 021728.png',
+    '/images/staybyte/Screenshot 2026-07-27 021740.png',
+    '/images/staybyte/Screenshot 2026-07-27 021758.png',
+    '/images/staybyte/Screenshot 2026-07-27 021809.png',
+    '/images/staybyte/Screenshot 2026-07-27 021818.png',
+    '/images/staybyte/Screenshot 2026-07-27 021828.png',
+    '/images/staybyte/Screenshot 2026-07-27 021838.png',
+    '/images/staybyte/Screenshot 2026-07-27 021942.png',
+    '/images/staybyte/Screenshot 2026-07-27 022005.png',
+    '/images/staybyte/Screenshot 2026-07-27 022017.png',
+    '/images/staybyte/Screenshot 2026-07-27 022039.png',
+    '/images/staybyte/Screenshot 2026-07-27 022053.png',
+    '/images/staybyte/Screenshot 2026-07-27 022111.png',
+    '/images/staybyte/Screenshot 2026-07-27 022120.png'
+  ];
+
   const flagship = t('projects.prescripto', { returnObjects: true }) as FlagshipProject;
   const hrms = t('projects.hrms', { returnObjects: true }) as { name: string; tagline: string; description: string };
   const staybite = t('projects.staybite', { returnObjects: true }) as { name: string; tagline: string; description: string };
-  const health247 = t('projects.health247', { returnObjects: true }) as { name: string; tagline: string; description: string };
 
   const reusableProjects = [
     {
@@ -37,24 +181,16 @@ export function Projects() {
       tagline: hrms.tagline,
       desc: hrms.description,
       tech: 'React, TypeScript, Tailwind, Chart.js, Spring Boot',
-      img: '/images/hrms.png',
-      documentUrl: 'https://drive.google.com/drive/folders/your-hrms-doc-id-placeholder',
+      imgs: worksphereScreenshots,
+      documentUrl: 'https://drive.google.com/drive/folders/1kFbnkX8PTggxnTSlkOR9fSj8cWtSkoja?usp=drive_link',
     },
     {
       name: staybite.name,
       tagline: staybite.tagline,
       desc: staybite.description,
       tech: 'React Native, Spring Boot, Socket.io, MySQL',
-      img: '/images/staybite.png',
-      documentUrl: 'https://drive.google.com/drive/folders/your-staybite-doc-id-placeholder',
-    },
-    {
-      name: health247.name,
-      tagline: health247.tagline,
-      desc: health247.description,
-      tech: 'Android, Java, XML, Exposys Data Labs',
-      img: '/images/staybite.png',
-      documentUrl: 'https://drive.google.com/drive/folders/your-health247-doc-id-placeholder',
+      imgs: staybyteScreenshots,
+      documentUrl: 'https://drive.google.com/drive/folders/1hyxVOgUYK5OhCpdKhBb2sq9UZ8qqMBq7?usp=drive_link',
     },
   ];
 
@@ -163,7 +299,7 @@ export function Projects() {
                       className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full text-xs font-semibold bg-zinc-900 hover:bg-zinc-800 border border-zinc-800 text-white transition-colors"
                     >
                       {showDeepDive ? <ChevronUp className="w-3.5 h-3.5" /> : <ChevronDown className="w-3.5 h-3.5" />}
-                      Technical Deep Dive
+                      {t('projects.technical_deep_dive')}
                     </button>
 
                     <div className="flex items-center gap-3">
@@ -173,7 +309,7 @@ export function Projects() {
                         rel="noopener noreferrer"
                         className="inline-flex items-center gap-2.5 px-5 py-2.5 rounded-full text-xs font-bold bg-brand-red hover:bg-brand-red-hover text-white transition-colors"
                       >
-                        View Project Document
+                        {t('projects.view_document')}
                         <ExternalLink className="w-3.5 h-3.5" />
                       </a>
                     </div>
@@ -234,67 +370,7 @@ export function Projects() {
         {/* Other Projects Reusable Cards */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {reusableProjects.map((proj, idx) => (
-            <motion.div
-              key={idx}
-              className="glass-card rounded-[28px] overflow-hidden flex flex-col justify-between"
-              initial={{ opacity: 0, y: 40 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: idx * 0.15 }}
-            >
-              {/* Image Header */}
-              <div className="aspect-video w-full overflow-hidden bg-zinc-950 border-b border-zinc-900 relative group">
-                <img
-                  src={proj.img}
-                  alt={proj.name}
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
-                />
-              </div>
-
-              {/* Card Body */}
-              <div className="p-6 sm:p-8 flex-1 flex flex-col justify-between space-y-6">
-                <div className="space-y-3">
-                  <div>
-                    <h4 className="font-display text-xl font-bold text-white">
-                      {proj.name}
-                    </h4>
-                    <p className="text-xs text-brand-red font-semibold">
-                      {proj.tagline}
-                    </p>
-                  </div>
-                  <p className="text-zinc-400 text-xs sm:text-sm leading-relaxed">
-                    {proj.desc}
-                  </p>
-                </div>
-
-                <div className="space-y-4">
-                  {/* Tech List */}
-                  <div className="flex flex-wrap gap-1.5">
-                    {proj.tech.split(', ').map((techItem, techIdx) => (
-                      <span
-                        key={techIdx}
-                        className="text-[9px] font-mono px-2 py-0.5 rounded bg-zinc-900 border border-zinc-800 text-zinc-500"
-                      >
-                        {techItem}
-                      </span>
-                    ))}
-                  </div>
-
-                  {/* Actions */}
-                  <div className="flex items-center gap-3 pt-2">
-                    <a
-                      href={proj.documentUrl}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="inline-flex items-center gap-1.5 px-4 py-2 rounded-full text-xs font-semibold bg-brand-red hover:bg-brand-red-hover text-white transition-colors"
-                    >
-                      View Project Document
-                      <ExternalLink className="w-3.5 h-3.5" />
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </motion.div>
+            <ProjectCard key={idx} proj={proj} idx={idx} />
           ))}
         </div>
 

@@ -55,8 +55,8 @@ export function Navbar() {
     >
       <div className="w-full max-w-6xl glass rounded-full px-6 py-3 flex items-center justify-between pointer-events-auto border-none shadow-2xl">
         {/* Brand Logo */}
-        <a href="#" className="font-display font-extrabold text-xl tracking-tight text-white flex items-center gap-2">
-          Gokul<span className="text-brand-red">.V</span>
+        <a href="#" className="font-display font-extrabold text-sm sm:text-lg tracking-tight text-white flex items-center gap-1.5">
+          {t('name_first')} <span className="text-brand-red">{t('name_last')}</span>
         </a>
 
         {/* Desktop Navigation Links */}

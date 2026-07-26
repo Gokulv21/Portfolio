@@ -1,4 +1,6 @@
 {
+  "name_first": "ヴェンカタチャラム",
+  "name_last": "ゴクル",
   "nav": {
     "about": "経歴",
     "experience": "職務経歴",
@@ -82,6 +84,8 @@
     "visit_site": "ライブデモ",
     "view_github": "GitHubで見る",
     "flagship": "フラッグシッププロジェクト（実運用中）",
+    "view_document": "プロジェクト資料を見る",
+    "technical_deep_dive": "詳細な技術仕様",
     "prescripto": {
       "name": "Prescripto",
       "tagline": "電子処方箋 ＆ クリニック総合管理システム",
@@ -100,12 +104,17 @@
     "biometric": {
       "name": "Behavioral Biometric Authentication",
       "tagline": "行動的生体認証システム（卒業研究）",
-      "description": "キーストローク（打鍵）の特徴やマウス操作の動きを機械学習で分析し、ユーザーを動的に継続認証するセキュリティシステム。"
+      "description": "キーストローク（打鍵）の特徴やマウス操作 of 動きを機械学習で分析し、ユーザーを動的に継続認証するセキュリティシステム。"
     },
-    "health247": {
-      "name": "24/7 Health and Care",
-      "tagline": "インターンシップ開発アプリ",
-      "description": "Exposys Data Labsでのインターンシップ中に設計・実装したAndroid向けヘルスケア・オンライン診療予約アプリ。"
+    "hrms": {
+      "name": "WorkSphere",
+      "tagline": "エンタープライズ向け人事業務管理システム (HRMS)",
+      "description": "従業員のオンボーディング、勤怠管理、業績評価、給与計算、および部門ワークフローを合理化するために設計された、包括的なデジタルワークスペースおよびHRMSプラットフォーム。"
+    },
+    "staybite": {
+      "name": "StayByte",
+      "tagline": "プレミアム宿泊・ホテル予約管理エンジン",
+      "description": "シームレスなスケジューリング、客室予約、リアルタイムの空室状況確認、および顧客への自動通知を実現する堅牢な予約管理プラットフォーム。"
     }
   },
   "tech": {
@@ -141,7 +150,8 @@
       { "name": "Android アプリ開発者 (インターンシップ証明)", "issuer": "Exposys Data Labs", "date": "2023年4月15日", "url": "https://drive.google.com/file/d/1KY3GCb2FxhYV3u0fR4fWCCd7U4dWF_tS/view" },
       { "name": "Python Basics for Data Science", "issuer": "IBM Cognitive Class", "date": "2022年6月20日", "url": "https://courses.edx.org/certificates/984e3bb34e4d4209afb259ccba38dfd5" },
       { "name": "Introduction to Cloud Development with HTML, CSS, and JS", "issuer": "IBM", "date": "2022年3月23日", "url": "https://courses.edx.org/certificates/57af80e0d13b400492c2ade2d1280a1c" }
-    ]
+    ],
+    "verify": "証明書を確認"
   },
   "contact": {
     "title": "お問い合わせ",

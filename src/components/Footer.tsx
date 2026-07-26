@@ -1,15 +1,14 @@
 import { useTranslation } from 'react-i18next';
-import { Github, Linkedin, Mail, Twitter } from 'lucide-react';
+import { Github, Linkedin, Mail } from 'lucide-react';
 
 export function Footer() {
   const { t } = useTranslation();
   const currentYear = new Date().getFullYear();
 
   const socialLinks = [
-    { icon: <Github className="w-4 h-4" />, href: '#', label: 'GitHub' },
-    { icon: <Linkedin className="w-4 h-4" />, href: '#', label: 'LinkedIn' },
-    { icon: <Twitter className="w-4 h-4" />, href: '#', label: 'Twitter' },
-    { icon: <Mail className="w-4 h-4" />, href: '#', label: 'Email' },
+    { icon: <Github className="w-4 h-4" />, href: 'https://github.com/Gokulv21', label: 'GitHub' },
+    { icon: <Linkedin className="w-4 h-4" />, href: 'https://www.linkedin.com/in/gokul-v-022936215/', label: 'LinkedIn' },
+    { icon: <Mail className="w-4 h-4" />, href: 'mailto:gokie210402@gmail.com', label: 'Email' },
   ];
 
   return (
@@ -19,10 +18,10 @@ export function Footer() {
         {/* Left Section */}
         <div className="text-center md:text-left space-y-2">
           <p className="font-display font-bold text-base tracking-wider text-white">
-            Gokul<span className="text-brand-red">.V</span>
+            {t('name_first')} <span className="text-brand-red">{t('name_last')}</span>
           </p>
           <p className="text-[10px] sm:text-xs text-zinc-500">
-            &copy; {currentYear} Gokul V. {t('footer.rights')}
+            &copy; {currentYear} {t('name_first')} {t('name_last')}. {t('footer.rights')}
           </p>
         </div>
 

@@ -68,7 +68,7 @@ export function Certifications() {
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-1 text-[10px] text-zinc-400 hover:text-white font-bold transition-colors"
                 >
-                  Verify
+                  {t('certifications.verify')}
                   <ExternalLink className="w-3 h-3" />
                 </a>
               </div>

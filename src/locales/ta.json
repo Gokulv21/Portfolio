@@ -1,4 +1,6 @@
 {
+  "name_first": "வெங்கடாசலம்",
+  "name_last": "கோகுல்",
   "nav": {
     "about": "பயணம்",
     "experience": "பணி அனுபவம்",
@@ -82,6 +84,8 @@
     "visit_site": "நேரடி செயல்முறை",
     "view_github": "GitHub பக்கம்",
     "flagship": "முதன்மையான திட்டம் (உண்மை பயன்பாடு)",
+    "view_document": "திட்ட ஆவணத்தைப் பார்க்க",
+    "technical_deep_dive": "தொழில்நுட்ப விவரங்கள்",
     "prescripto": {
       "name": "Prescripto",
       "tagline": "நவீன மருத்துவச்சீட்டு மற்றும் மருத்துவமனை மேலாண்மை தளம்",
@@ -102,10 +106,15 @@
       "tagline": "நடத்தை அடிப்படையிலான生生 உயிரியளவியல் அங்கீகாரம்",
       "description": "பயனரின் தட்டச்சு வேகம், மவுஸ் இயக்கங்களை இயந்திரக் கற்றல் (Machine Learning) மூலம் பகுப்பாய்வு செய்து பாதுகாப்பை உறுதி செய்யும் மென்பொருள்."
     },
-    "health247": {
-      "name": "24/7 Health and Care",
-      "tagline": "ஆண்ட்ராய்டு செயலி (பயிற்சித் திட்டம்)",
-      "description": "Exposys Data Labs நிறுவன பயிற்சிப் பணியின் போது உருவாக்கப்பட்ட ஆண்ட்ராய்டு ஹெல்த்கேர் முன்பதிவு மற்றும் மேலாண்மை செயலி."
+    "hrms": {
+      "name": "WorkSphere",
+      "tagline": "நிறுவன மனித வள மேலாண்மை தளம் (HRMS)",
+      "description": "ஊழியர்களின் வருகைப்பதிவு, சம்பள மேலாண்மை, செயல்திறன் கண்காணிப்பு மற்றும் துறை சார்ந்த பணிகளை எளிதாக்க உருவாக்கப்பட்ட மனித வள மேலாண்மை மென்பொருள்."
+    },
+    "staybite": {
+      "name": "StayByte",
+      "tagline": "பிரீமியம் ஹோட்டல் முன்பதிவு மற்றும் மேலாண்மை மென்பொருள்",
+      "description": "ஹோட்டல் அறைகள் முன்பதிவு, தங்குமிட விவரங்கள், மற்றும் நிகழ்நேர அறை இருப்பை எளிதாக சரிபார்க்கும் அதிநவீன முன்பதிவு தளம்."
     }
   },
   "tech": {
@@ -141,7 +150,8 @@
       { "name": "Android App Developer (பயிற்சிச் சான்றிதழ்)", "issuer": "Exposys Data Labs", "date": "ஏப்ரல் 15, 2023", "url": "https://drive.google.com/file/d/1KY3GCb2FxhYV3u0fR4fWCCd7U4dWF_tS/view" },
       { "name": "Python Basics for Data Science", "issuer": "IBM Cognitive Class", "date": "ஜூன் 20, 2022", "url": "https://courses.edx.org/certificates/984e3bb34e4d4209afb259ccba38dfd5" },
       { "name": "Introduction to Cloud Development with HTML, CSS, and JS", "issuer": "IBM", "date": "மார்ச் 23, 2022", "url": "https://courses.edx.org/certificates/57af80e0d13b400492c2ade2d1280a1c" }
-    ]
+    ],
+    "verify": "சரிபார்க்க"
   },
   "contact": {
     "title": "தொடர்புகொள்ள",

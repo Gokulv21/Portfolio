@@ -60,7 +60,11 @@ export function Contact() {
         templateId,
         {
           from_name: data.name,
+          from_email: data.email,
           reply_to: data.email,
+          user_name: data.name,
+          user_email: data.email,
+          email: data.email,
           message: data.message,
         },
         publicKey
@@ -69,6 +73,10 @@ export function Contact() {
       reset();
     } catch (err) {
       console.error('EmailJS error:', err);
+      console.error('If you are seeing this, please verify that:',
+        '\n1. The service ID, template ID, and public key in your .env are correct.',
+        '\n2. If deploying to production (e.g. Vercel), you have added these environment variables in your deployment dashboard.'
+      );
       setStatus('error');
     }
   };
