@@ -67,7 +67,7 @@
         ]
       },
       {
-        "period": "Nov 2025 - Jan 2026",
+        "period": "2025 - 2026",
         "company": "JK Global IT Solutions",
         "role": "Software Developer",
         "points": [
@@ -133,23 +133,73 @@
       "next_up": "Next Up"
     },
     "items": [
-      { "name": "Spring Boot", "status": "completed", "desc": "Mastered building production-grade enterprise Java microservices." },
-      { "name": "Japanese Language", "status": "in_progress", "desc": "Actively learning professional and conversational Japanese." },
-      { "name": "SAP S/4HANA", "status": "in_progress", "desc": "Gaining deep expertise in enterprise resource planning orchestration." },
-      { "name": "SAP ABAP", "status": "in_progress", "desc": "Learning advanced business application programming for S/4HANA workflows." },
-      { "name": "SAP BTP (Business Technology Platform)", "status": "next_up", "desc": "Next goal: building and extending cloud solutions with SAP integrations." }
+      {
+        "name": "Spring Boot",
+        "status": "completed",
+        "desc": "Mastered building production-grade enterprise Java microservices."
+      },
+      {
+        "name": "Japanese Language",
+        "status": "in_progress",
+        "desc": "Actively learning professional and conversational Japanese."
+      },
+      {
+        "name": "SAP S/4HANA",
+        "status": "in_progress",
+        "desc": "Gaining deep expertise in enterprise resource planning orchestration."
+      },
+      {
+        "name": "SAP ABAP",
+        "status": "in_progress",
+        "desc": "Learning advanced business application programming for S/4HANA workflows."
+      },
+      {
+        "name": "SAP BTP (Business Technology Platform)",
+        "status": "next_up",
+        "desc": "Next goal: building and extending cloud solutions with SAP integrations."
+      }
     ]
   },
   "certifications": {
     "title": "Certifications",
     "subtitle": "Validated industry qualifications.",
     "items": [
-      { "name": "Microsoft Certified: Azure Fundamentals", "issuer": "Microsoft", "date": "May 16, 2023", "url": "https://drive.google.com/file/d/1uAVIDewAAd8l14T7CN7CEzkuWs3ZXRPb/view" },
-      { "name": "AWS Cloud Practitioner Essentials", "issuer": "Amazon Web Services", "date": "May 09, 2023", "url": "https://courses.edx.org/certificates/bff6d5c5cfe34bc5a6c920d6e4ce0459" },
-      { "name": "Microsoft Certified: Power Platform Fundamentals", "issuer": "Microsoft", "date": "May 11, 2023", "url": "https://drive.google.com/file/d/1wXdSF3PXIW2_HmXJVbVV8xDHnq_AhJhl/view" },
-      { "name": "Android App Developer (Internship Certificate)", "issuer": "Exposys Data Labs", "date": "April 15, 2023", "url": "https://drive.google.com/file/d/1KY3GCb2FxhYV3u0fR4fWCCd7U4dWF_tS/view" },
-      { "name": "Python Basics for Data Science", "issuer": "IBM Cognitive Class", "date": "June 20, 2022", "url": "https://courses.edx.org/certificates/984e3bb34e4d4209afb259ccba38dfd5" },
-      { "name": "Introduction to Cloud Development with HTML, CSS, and JS", "issuer": "IBM", "date": "March 23, 2022", "url": "https://courses.edx.org/certificates/57af80e0d13b400492c2ade2d1280a1c" }
+      {
+        "name": "Microsoft Certified: Azure Fundamentals",
+        "issuer": "Microsoft",
+        "date": "May 16, 2023",
+        "url": "https://drive.google.com/file/d/1uAVIDewAAd8l14T7CN7CEzkuWs3ZXRPb/view"
+      },
+      {
+        "name": "AWS Cloud Practitioner Essentials",
+        "issuer": "Amazon Web Services",
+        "date": "May 09, 2023",
+        "url": "https://courses.edx.org/certificates/bff6d5c5cfe34bc5a6c920d6e4ce0459"
+      },
+      {
+        "name": "Microsoft Certified: Power Platform Fundamentals",
+        "issuer": "Microsoft",
+        "date": "May 11, 2023",
+        "url": "https://drive.google.com/file/d/1wXdSF3PXIW2_HmXJVbVV8xDHnq_AhJhl/view"
+      },
+      {
+        "name": "Android App Developer (Internship Certificate)",
+        "issuer": "Exposys Data Labs",
+        "date": "April 15, 2023",
+        "url": "https://drive.google.com/file/d/1KY3GCb2FxhYV3u0fR4fWCCd7U4dWF_tS/view"
+      },
+      {
+        "name": "Python Basics for Data Science",
+        "issuer": "IBM Cognitive Class",
+        "date": "June 20, 2022",
+        "url": "https://courses.edx.org/certificates/984e3bb34e4d4209afb259ccba38dfd5"
+      },
+      {
+        "name": "Introduction to Cloud Development with HTML, CSS, and JS",
+        "issuer": "IBM",
+        "date": "March 23, 2022",
+        "url": "https://courses.edx.org/certificates/57af80e0d13b400492c2ade2d1280a1c"
+      }
     ],
     "verify": "Verify"
   },

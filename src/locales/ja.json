@@ -67,7 +67,7 @@
         ]
       },
       {
-        "period": "2025年11月 - 2026年1月",
+        "period": "2025年 - 2026年",
         "company": "JK Global IT Solutions",
         "role": "ソフトウェアデベロッパー",
         "points": [
@@ -133,23 +133,73 @@
       "next_up": "次に学習"
     },
     "items": [
-      { "name": "Spring Boot", "status": "completed", "desc": "実用的なエンタープライズJavaマイクロサービスの設計と開発スキルを修得。" },
-      { "name": "日本語", "status": "in_progress", "desc": "日常会話からビジネスレベルの実用的な日本語を習得中。" },
-      { "name": "SAP S/4HANA", "status": "in_progress", "desc": "基幹業務システム（ERP）の構成とプロセス制御の高度な学習。" },
-      { "name": "SAP ABAP", "status": "in_progress", "desc": "S/4HANA向けアドオン開発用のビジネスアプリケーションプログラミング。" },
-      { "name": "SAP BTP (Business Technology Platform)", "status": "next_up", "desc": "次期計画：SAP環境との統合およびクラウドサービスの拡張手法の学習。" }
+      {
+        "name": "Spring Boot",
+        "status": "completed",
+        "desc": "実用的なエンタープライズJavaマイクロサービスの設計と開発スキルを修得。"
+      },
+      {
+        "name": "日本語",
+        "status": "in_progress",
+        "desc": "日常会話からビジネスレベルの実用的な日本語を習得中。"
+      },
+      {
+        "name": "SAP S/4HANA",
+        "status": "in_progress",
+        "desc": "基幹業務システム（ERP）の構成とプロセス制御の高度な学習。"
+      },
+      {
+        "name": "SAP ABAP",
+        "status": "in_progress",
+        "desc": "S/4HANA向けアドオン開発用のビジネスアプリケーションプログラミング。"
+      },
+      {
+        "name": "SAP BTP (Business Technology Platform)",
+        "status": "next_up",
+        "desc": "次期計画：SAP環境との統合およびクラウドサービスの拡張手法の学習。"
+      }
     ]
   },
   "certifications": {
     "title": "保有資格",
     "subtitle": "実力を証明する公式の技術資格。",
     "items": [
-      { "name": "Microsoft 認定: Azure Fundamentals", "issuer": "Microsoft", "date": "2023年5月16日", "url": "https://drive.google.com/file/d/1uAVIDewAAd8l14T7CN7CEzkuWs3ZXRPb/view" },
-      { "name": "AWS 認定 クラウドプラクティショナー", "issuer": "Amazon Web Services", "date": "2023年5月9日", "url": "https://courses.edx.org/certificates/bff6d5c5cfe34bc5a6c920d6e4ce0459" },
-      { "name": "Microsoft 認定: Power Platform Fundamentals", "issuer": "Microsoft", "date": "2023年5月11日", "url": "https://drive.google.com/file/d/1wXdSF3PXIW2_HmXJVbVV8xDHnq_AhJhl/view" },
-      { "name": "Android アプリ開発者 (インターンシップ証明)", "issuer": "Exposys Data Labs", "date": "2023年4月15日", "url": "https://drive.google.com/file/d/1KY3GCb2FxhYV3u0fR4fWCCd7U4dWF_tS/view" },
-      { "name": "Python Basics for Data Science", "issuer": "IBM Cognitive Class", "date": "2022年6月20日", "url": "https://courses.edx.org/certificates/984e3bb34e4d4209afb259ccba38dfd5" },
-      { "name": "Introduction to Cloud Development with HTML, CSS, and JS", "issuer": "IBM", "date": "2022年3月23日", "url": "https://courses.edx.org/certificates/57af80e0d13b400492c2ade2d1280a1c" }
+      {
+        "name": "Microsoft 認定: Azure Fundamentals",
+        "issuer": "Microsoft",
+        "date": "2023年5月16日",
+        "url": "https://drive.google.com/file/d/1uAVIDewAAd8l14T7CN7CEzkuWs3ZXRPb/view"
+      },
+      {
+        "name": "AWS 認定 クラウドプラクティショナー",
+        "issuer": "Amazon Web Services",
+        "date": "2023年5月9日",
+        "url": "https://courses.edx.org/certificates/bff6d5c5cfe34bc5a6c920d6e4ce0459"
+      },
+      {
+        "name": "Microsoft 認定: Power Platform Fundamentals",
+        "issuer": "Microsoft",
+        "date": "2023年5月11日",
+        "url": "https://drive.google.com/file/d/1wXdSF3PXIW2_HmXJVbVV8xDHnq_AhJhl/view"
+      },
+      {
+        "name": "Android アプリ開発者 (インターンシップ証明)",
+        "issuer": "Exposys Data Labs",
+        "date": "2023年4月15日",
+        "url": "https://drive.google.com/file/d/1KY3GCb2FxhYV3u0fR4fWCCd7U4dWF_tS/view"
+      },
+      {
+        "name": "Python Basics for Data Science",
+        "issuer": "IBM Cognitive Class",
+        "date": "2022年6月20日",
+        "url": "https://courses.edx.org/certificates/984e3bb34e4d4209afb259ccba38dfd5"
+      },
+      {
+        "name": "Introduction to Cloud Development with HTML, CSS, and JS",
+        "issuer": "IBM",
+        "date": "2022年3月23日",
+        "url": "https://courses.edx.org/certificates/57af80e0d13b400492c2ade2d1280a1c"
+      }
     ],
     "verify": "証明書を確認"
   },
