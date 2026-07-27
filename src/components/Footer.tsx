@@ -1,5 +1,5 @@
 import { useTranslation } from 'react-i18next';
-import { Github, Linkedin, Mail } from 'lucide-react';
+import { Github, Linkedin, Mail, Phone } from 'lucide-react';
 
 export function Footer() {
   const { t } = useTranslation();
@@ -9,6 +9,7 @@ export function Footer() {
     { icon: <Github className="w-4 h-4" />, href: 'https://github.com/Gokulv21', label: 'GitHub' },
     { icon: <Linkedin className="w-4 h-4" />, href: 'https://www.linkedin.com/in/gokul-v-022936215/', label: 'LinkedIn' },
     { icon: <Mail className="w-4 h-4" />, href: 'mailto:gokie210402@gmail.com', label: 'Email' },
+    { icon: <Phone className="w-4 h-4" />, href: 'tel:+818098366263', label: 'Phone' },
   ];
 
   return (

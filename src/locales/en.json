@@ -9,7 +9,9 @@
     "roadmap": "Roadmap",
     "certifications": "Certifications",
     "contact": "Contact",
-    "lang_hint": "Click here for Japanese and Tamil"
+    "lang_hint": "Click here for Japanese and Tamil",
+    "mode_job": "Job",
+    "mode_freelance": "Freelance"
   },
   "hero": {
     "role_engineer": "Software Engineer",
@@ -86,6 +88,17 @@
     "flagship": "Flagship Project (Real-world)",
     "view_document": "View Project Document",
     "technical_deep_dive": "Technical Deep Dive",
+    "why_button": "Why {{name}}",
+    "roadmap_title": "Development & Deployment Process",
+    "roadmap_subtitle": "How I collaborate with you from raw idea to zero-downtime production deployment.",
+    "phase1_title": "Discovery & Scope 🕵🏻",
+    "phase1_desc": "We define the core user problems, requirements, and target timeline. We build a clean strategic specification.",
+    "phase2_title": "UI/UX Mockups 🎨",
+    "phase2_desc": "Interactive wireframes are created so you can visually click through the key layouts before a single line of code is written.",
+    "phase3_title": "Agile Coding & QA ⚙️",
+    "phase3_desc": "Writing high-quality React/Spring Boot code with extensive unit test coverage. Daily/weekly progress updates provided.",
+    "phase4_title": "CI/CD Pipeline & Launch ♾️",
+    "phase4_desc": "Automated deployment pipelines compile and deploy changes with zero-downtime, keeping your platform perfectly up and active.",
     "prescripto": {
       "name": "Prescripto",
       "tagline": "Modern E-Prescription & Clinic Management System",
@@ -94,7 +107,9 @@
       "tech": "React, TypeScript, Supabase, PostgreSQL, Tailwind CSS",
       "features": "Real-time clinic queue management, patient vitals tracking, prescription history, handwritten digital prescription canvas.",
       "challenges": "Synchronizing real-time queue states dynamically across multiple devices while preventing appointment conflicts.",
-      "results": "Deployed live and currently active in-clinic. Slashed prescription processing time and improved patient record lookup speeds by 50%."
+      "results": "Deployed live and currently active in-clinic. Slashed prescription processing time and improved patient record lookup speeds by 50%.",
+      "why": "One night, I asked my brother what daily life work challenges he faced. He said patients, particularly in rural areas, often lose their physical prescriptions or fail to keep them properly. This was the spark that led to the creation of Prescripto.",
+      "problem_solving": "Prescripto resolves this by digitizing patient history and active queue records securely online, while keeping the traditional prescription experience alive via a custom handwriting canvas with Apple Pencil support."
     },
     "infoview": {
       "name": "Info View",
@@ -109,12 +124,16 @@
     "hrms": {
       "name": "WorkSphere",
       "tagline": "Enterprise Human Resource Management System (HRMS)",
-      "description": "A comprehensive digital workspace and HRMS platform designed to streamline employee onboarding, attendance, performance tracking, payroll management, and department workflows."
+      "description": "A comprehensive digital workspace and HRMS platform designed to streamline employee onboarding, attendance, performance tracking, payroll management, and department workflows.",
+      "why": "With the rise of hybrid workspaces, companies struggled to manage employee onboarding, shift planning, payroll, and department alignment across multiple disjointed systems.",
+      "problem_solving": "WorkSphere resolves this by consolidating HR tasks into a single platform: handling onboarding workflows, payroll automation, and real-time attendance tracking under a unified, high-performance portal."
     },
     "staybite": {
-      "name": "StayByte",
+      "name": "StayBite",
       "tagline": "Premium Hotel Booking & Accommodation Engine",
-      "description": "A robust booking platform designed to facilitate seamless scheduling, room reservations, real-time availability checks, and customer notifications."
+      "description": "A robust booking platform designed to facilitate seamless scheduling, room reservations, real-time availability checks, and customer notifications.",
+      "why": "Traditional accommodation platforms suffered from slow real-time sync, high platform fees, and complex UI flows, making booking and room allocation painful for both hotels and guests.",
+      "problem_solving": "StayBite addresses this by utilizing WebSockets for real-time room availability validation and automated customer notification dispatches, accelerating scheduling operations by 40%."
     }
   },
   "tech": {

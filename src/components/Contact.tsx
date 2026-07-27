@@ -97,9 +97,9 @@ export function Contact() {
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] rounded-full bg-brand-glow opacity-15 blur-[120px] pointer-events-none" />
 
       <div className="w-full max-w-4xl mx-auto px-6 relative z-10">
-        
+
         {/* Section Header */}
-        <div className="text-center space-y-2 mb-16">
+        <div className="text-center space-y-3 mb-16">
           <h2 className="font-display text-3xl sm:text-5xl font-extrabold tracking-tight text-white">
             {t('contact.title')}
           </h2>

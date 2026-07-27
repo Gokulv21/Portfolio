@@ -2,9 +2,11 @@ import { useEffect, useRef, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { ArrowRight, FileText, Send } from 'lucide-react';
 import { motion } from 'framer-motion';
+import { usePortfolioMode } from '../hooks/usePortfolioMode';
 
 export function Hero() {
   const { t } = useTranslation();
+  const { mode } = usePortfolioMode();
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const [typingIndex, setTypingIndex] = useState(0);
   const [displayText, setDisplayText] = useState('');
@@ -194,20 +196,34 @@ export function Hero() {
               href="#contact"
               className="inline-flex items-center gap-2 px-6 py-3 rounded-full text-sm font-semibold bg-zinc-900 border border-zinc-800 hover:bg-zinc-800 text-white transition-colors"
             >
-              {t('hero.btn_contact')}
+              {mode === 'freelance' ? 'Book a Project' : t('hero.btn_contact')}
               <Send className="w-4 h-4" />
             </a>
 
-            <a
-              href="/Gokul_Resume.pdf"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 px-6 py-3 rounded-full text-sm font-semibold bg-transparent hover:bg-zinc-900 text-gray-400 hover:text-white transition-colors"
-            >
-              <FileText className="w-4 h-4" />
-              {t('hero.btn_resume')}
-            </a>
+            {mode === 'job' && (
+              <a
+                href="/Gokul_Resume.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 px-6 py-3 rounded-full text-sm font-semibold bg-transparent hover:bg-zinc-900 text-gray-400 hover:text-white transition-colors"
+              >
+                <FileText className="w-4 h-4" />
+                {t('hero.btn_resume')}
+              </a>
+            )}
           </div>
+          
+          {/* Freelance Availability Status */}
+          {mode === 'freelance' && (
+            <motion.div
+              initial={{ opacity: 0, y: 10 }}
+              animate={{ opacity: 1, y: 0 }}
+              className="flex items-center gap-2 text-xs text-brand-red font-semibold pt-2"
+            >
+              <span className="w-2.5 h-2.5 rounded-full bg-brand-red animate-ping" />
+              <span>Currently accepting select freelance projects for Q3/Q4 2026</span>
+            </motion.div>
+          )}
         </div>
 
       </div>

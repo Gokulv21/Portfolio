@@ -12,6 +12,7 @@ import { Roadmap } from './components/Roadmap';
 import { Certifications } from './components/Certifications';
 import { Contact } from './components/Contact';
 import { Footer } from './components/Footer';
+import { PortfolioModeProvider } from './hooks/usePortfolioMode';
 
 // Ensure i18n is initialized
 import './i18n';
@@ -37,31 +38,33 @@ export function App() {
   }, []);
 
   return (
-    <div className="bg-black text-white relative min-h-screen">
-      {/* Premium Loader */}
-      <PageLoader />
+    <PortfolioModeProvider>
+      <div className="bg-black text-white relative min-h-screen">
+        {/* Premium Loader */}
+        <PageLoader />
 
-      {/* Interactive Cursor */}
-      <CustomCursor />
+        {/* Interactive Cursor */}
+        <CustomCursor />
 
-      {/* Floating Header Navigation */}
-      <Navbar />
+        {/* Floating Header Navigation */}
+        <Navbar />
 
-      {/* Main Content Layout Sections */}
-      <main>
-        <Hero />
-        <About />
-        <Experience />
-        <Projects />
-        <TechStack />
-        <Roadmap />
-        <Certifications />
-        <Contact />
-      </main>
+        {/* Main Content Layout Sections */}
+        <main>
+          <Hero />
+          <About />
+          <Experience />
+          <Projects />
+          <TechStack />
+          <Roadmap />
+          <Certifications />
+          <Contact />
+        </main>
 
-      {/* Footer Details */}
-      <Footer />
-    </div>
+        {/* Footer Details */}
+        <Footer />
+      </div>
+    </PortfolioModeProvider>
   );
 }
 export default App;

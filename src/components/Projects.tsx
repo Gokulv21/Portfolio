@@ -3,6 +3,7 @@ import { useTranslation } from 'react-i18next';
 import { ExternalLink, ChevronDown, ChevronUp, Layers, HelpCircle, Award } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useMouseGlow } from '../hooks/useMouseGlow';
+import { usePortfolioMode } from '../hooks/usePortfolioMode';
 
 interface FlagshipProject {
   name: string;
@@ -13,6 +14,8 @@ interface FlagshipProject {
   features: string;
   challenges: string;
   results: string;
+  why?: string;
+  problem_solving?: string;
 }
 
 interface ReusableProjectProps {
@@ -23,6 +26,8 @@ interface ReusableProjectProps {
     tech: string;
     imgs: string[];
     documentUrl: string;
+    why?: string;
+    problemSolving?: string;
   };
   idx: number;
 }
@@ -30,6 +35,7 @@ interface ReusableProjectProps {
 function ProjectCard({ proj, idx }: ReusableProjectProps) {
   const { t } = useTranslation();
   const [activeImgIndex, setActiveImgIndex] = useState(0);
+  const [showWhy, setShowWhy] = useState(false);
 
   return (
     <motion.div
@@ -111,7 +117,7 @@ function ProjectCard({ proj, idx }: ReusableProjectProps) {
           </div>
 
           {/* Actions */}
-          <div className="flex items-center gap-3 pt-2">
+          <div className="flex flex-wrap items-center gap-3 pt-2">
             <a
               href={proj.documentUrl}
               target="_blank"
@@ -121,7 +127,47 @@ function ProjectCard({ proj, idx }: ReusableProjectProps) {
               {t('projects.view_document')}
               <ExternalLink className="w-3.5 h-3.5" />
             </a>
+            {proj.why && proj.problemSolving && (
+              <button
+                onClick={() => setShowWhy(!showWhy)}
+                className="inline-flex items-center gap-1.5 px-4 py-2 rounded-full text-xs font-semibold bg-zinc-900 hover:bg-zinc-800 border border-zinc-800 text-white transition-colors cursor-pointer"
+              >
+                {showWhy ? <ChevronUp className="w-3 h-3" /> : <ChevronDown className="w-3 h-3" />}
+                {t('projects.why_button', { name: proj.name })}
+              </button>
+            )}
           </div>
+
+          {/* Why & Problem Solving Collapsible Drawer */}
+          <AnimatePresence>
+            {showWhy && proj.why && proj.problemSolving && (
+              <motion.div
+                initial={{ opacity: 0, height: 0 }}
+                animate={{ opacity: 1, height: 'auto' }}
+                exit={{ opacity: 0, height: 0 }}
+                className="overflow-hidden"
+              >
+                <div className="mt-4 grid grid-cols-1 gap-4 p-4 rounded-2xl bg-zinc-900/30 border border-zinc-800/50">
+                  <div className="space-y-1">
+                    <div className="text-brand-red font-semibold text-[10px] uppercase tracking-wider">
+                      Why '{proj.name}'?
+                    </div>
+                    <p className="text-zinc-400 text-xs leading-relaxed">
+                      {proj.why}
+                    </p>
+                  </div>
+                  <div className="space-y-1">
+                    <div className="text-brand-red font-semibold text-[10px] uppercase tracking-wider">
+                      Problem Solving
+                    </div>
+                    <p className="text-zinc-400 text-xs leading-relaxed">
+                      {proj.problemSolving}
+                    </p>
+                  </div>
+                </div>
+              </motion.div>
+            )}
+          </AnimatePresence>
         </div>
       </div>
     </motion.div>
@@ -130,7 +176,9 @@ function ProjectCard({ proj, idx }: ReusableProjectProps) {
 
 export function Projects() {
   const { t } = useTranslation();
+  const { mode } = usePortfolioMode();
   const [showDeepDive, setShowDeepDive] = useState(false);
+  const [showWhyPrescripto, setShowWhyPrescripto] = useState(false);
   const [activeImgIndex, setActiveImgIndex] = useState(0);
   const glowRef = useMouseGlow<HTMLDivElement>();
   const screenshots = [
@@ -172,8 +220,8 @@ export function Projects() {
   ];
 
   const flagship = t('projects.prescripto', { returnObjects: true }) as FlagshipProject;
-  const hrms = t('projects.hrms', { returnObjects: true }) as { name: string; tagline: string; description: string };
-  const staybite = t('projects.staybite', { returnObjects: true }) as { name: string; tagline: string; description: string };
+  const hrms = t('projects.hrms', { returnObjects: true }) as { name: string; tagline: string; description: string; why?: string; problem_solving?: string };
+  const staybite = t('projects.staybite', { returnObjects: true }) as { name: string; tagline: string; description: string; why?: string; problem_solving?: string };
 
   const reusableProjects = [
     {
@@ -183,6 +231,8 @@ export function Projects() {
       tech: 'React, TypeScript, Tailwind, Chart.js, Spring Boot',
       imgs: worksphereScreenshots,
       documentUrl: 'https://drive.google.com/drive/folders/1kFbnkX8PTggxnTSlkOR9fSj8cWtSkoja?usp=drive_link',
+      why: hrms.why,
+      problemSolving: hrms.problem_solving,
     },
     {
       name: staybite.name,
@@ -191,6 +241,8 @@ export function Projects() {
       tech: 'React Native, Spring Boot, Socket.io, MySQL',
       imgs: staybyteScreenshots,
       documentUrl: 'https://drive.google.com/drive/folders/1hyxVOgUYK5OhCpdKhBb2sq9UZ8qqMBq7?usp=drive_link',
+      why: staybite.why,
+      problemSolving: staybite.problem_solving,
     },
   ];
 
@@ -295,12 +347,28 @@ export function Projects() {
                 <div className="space-y-4">
                   <div className="flex flex-wrap gap-4 items-center">
                     <button
-                      onClick={() => setShowDeepDive(!showDeepDive)}
-                      className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full text-xs font-semibold bg-zinc-900 hover:bg-zinc-800 border border-zinc-800 text-white transition-colors"
+                      onClick={() => {
+                        setShowDeepDive(!showDeepDive);
+                        setShowWhyPrescripto(false);
+                      }}
+                      className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full text-xs font-semibold bg-zinc-900 hover:bg-zinc-800 border border-zinc-800 text-white transition-colors cursor-pointer"
                     >
                       {showDeepDive ? <ChevronUp className="w-3.5 h-3.5" /> : <ChevronDown className="w-3.5 h-3.5" />}
                       {t('projects.technical_deep_dive')}
                     </button>
+
+                    {flagship.why && flagship.problem_solving && (
+                      <button
+                        onClick={() => {
+                          setShowWhyPrescripto(!showWhyPrescripto);
+                          setShowDeepDive(false);
+                        }}
+                        className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full text-xs font-semibold bg-zinc-900 hover:bg-zinc-800 border border-zinc-800 text-white transition-colors cursor-pointer"
+                      >
+                        {showWhyPrescripto ? <ChevronUp className="w-3.5 h-3.5" /> : <ChevronDown className="w-3.5 h-3.5" />}
+                        {t('projects.why_button', { name: flagship.name })}
+                      </button>
+                    )}
 
                     <div className="flex items-center gap-3">
                       <a
@@ -364,6 +432,42 @@ export function Projects() {
                 </motion.div>
               )}
             </AnimatePresence>
+
+            {/* Why Prescripto Content Drawer */}
+            <AnimatePresence>
+              {showWhyPrescripto && flagship.why && flagship.problem_solving && (
+                <motion.div
+                  initial={{ opacity: 0, height: 0 }}
+                  animate={{ opacity: 1, height: 'auto' }}
+                  exit={{ opacity: 0, height: 0 }}
+                  className="overflow-hidden"
+                >
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6 p-6 sm:p-8 glass rounded-[28px] border border-brand-red/10 bg-zinc-950/50 mt-4">
+                    {/* Why */}
+                    <div className="space-y-3 p-4 rounded-2xl bg-zinc-900/30 border border-zinc-800/50">
+                      <div className="flex items-center gap-2 text-brand-red font-semibold text-xs uppercase tracking-wider">
+                        <Layers className="w-4 h-4" />
+                        Why '{flagship.name}'?
+                      </div>
+                      <p className="text-zinc-400 text-xs sm:text-sm leading-relaxed">
+                        {flagship.why}
+                      </p>
+                    </div>
+
+                    {/* Problem Solving */}
+                    <div className="space-y-3 p-4 rounded-2xl bg-zinc-900/30 border border-zinc-800/50">
+                      <div className="flex items-center gap-2 text-brand-red font-semibold text-xs uppercase tracking-wider">
+                        <HelpCircle className="w-4 h-4" />
+                        Problem Solving
+                      </div>
+                      <p className="text-zinc-400 text-xs sm:text-sm leading-relaxed">
+                        {flagship.problem_solving}
+                      </p>
+                    </div>
+                  </div>
+                </motion.div>
+              )}
+            </AnimatePresence>
           </div>
         )}
 
@@ -373,6 +477,71 @@ export function Projects() {
             <ProjectCard key={idx} proj={proj} idx={idx} />
           ))}
         </div>
+
+        {/* Freelance Mode Process Roadmap */}
+        {mode === 'freelance' && (
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            className="mt-24 pt-12 border-t border-zinc-900 space-y-12"
+          >
+            <div className="text-center md:text-left space-y-2">
+              <h3 className="font-display text-2xl sm:text-4xl font-extrabold text-white">
+                🤝 {t('projects.roadmap_title') || 'Development & Deployment Process'}
+              </h3>
+              <p className="text-zinc-500 text-sm sm:text-base max-w-2xl">
+                {t('projects.roadmap_subtitle') || 'How I collaborate with you from raw idea to zero-downtime production deployment.'}
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
+              {[
+                {
+                  phase: '01',
+                  title: t('projects.phase1_title') || 'Discovery & Scope 🔍',
+                  desc: t('projects.phase1_desc') || 'We define the core user problems, requirements, and target timeline. We build a clean strategic specification.',
+                },
+                {
+                  phase: '02',
+                  title: t('projects.phase2_title') || 'UI/UX Mockups 🎨',
+                  desc: t('projects.phase2_desc') || 'Interactive wireframes are created so you can visually click through the key layouts before a single line of code is written.',
+                },
+                {
+                  phase: '03',
+                  title: t('projects.phase3_title') || 'Agile Coding & QA ⚙️',
+                  desc: t('projects.phase3_desc') || 'Writing high-quality React/Spring Boot code with extensive unit test coverage. Daily/weekly progress updates provided.',
+                },
+                {
+                  phase: '04',
+                  title: t('projects.phase4_title') || 'CI/CD Pipeline & Launch 🚀',
+                  desc: t('projects.phase4_desc') || 'Automated deployment pipelines compile and deploy changes with zero-downtime, keeping your platform perfectly up and active.',
+                },
+              ].map((p, pIdx) => (
+                <div
+                  key={pIdx}
+                  className="glass-card p-6 rounded-3xl border border-zinc-800 hover:border-brand-red transition-all duration-300 relative group flex flex-col justify-between min-h-[220px]"
+                >
+                  <div className="space-y-4">
+                    <div className="flex items-center justify-between">
+                      <span className="text-[10px] font-bold text-brand-red uppercase tracking-widest">
+                        Phase {p.phase}
+                      </span>
+                      <span className="text-3xl font-display font-extrabold text-zinc-900 group-hover:text-brand-red/10 transition-colors">
+                        {p.phase}
+                      </span>
+                    </div>
+                    <h4 className="font-display font-bold text-white text-base">
+                      {p.title}
+                    </h4>
+                    <p className="text-zinc-400 text-xs sm:text-sm leading-relaxed">
+                      {p.desc}
+                    </p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </motion.div>
+        )}
 
       </div>
     </section>
